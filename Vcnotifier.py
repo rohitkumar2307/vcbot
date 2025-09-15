@@ -4,7 +4,7 @@ import os
 
 TOKEN = os.getenv("DISCORD_TOKEN")  # Bot token from Railway
 VC_ROLE_NAME = "VC-Notify"          # Role name in your server
-ALERT_CHANNEL_ID = 123456789012345678  # Replace with text channel ID
+ALERT_CHANNEL_ID = 1408885584176349338  # Replace with text channel ID
 
 intents = discord.Intents.default()
 intents.voice_states = True
@@ -29,3 +29,4 @@ async def on_voice_state_update(member, before, after):
                 await channel.send(f"🔔 {member.mention} just joined **{after.channel.name}**! {role.mention}")
 
 bot.run(TOKEN)
+
